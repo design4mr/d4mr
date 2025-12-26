@@ -2,396 +2,187 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>  موريتانيا للتصميم والبرمجة</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>::أذكـــاري::    </title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #1a5276;
-            --secondary: #2c3e50;
-            --accent: #3498db;
-            --light: #f5f7fa;
-            --text: #2c3e50;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-			font-family: "alarabiya";
-        }
-		@font-face {
-    
-  font-family: "alarabiya";
-  src: url("font/alarabiya.ttf");
-}
-        
         body {
-            font-family: 'Tajawal', sans-serif;
-            background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
-            color: var(--text);
-            line-height: 1.8;
-            min-height: 100vh;
-            position: relative;
-            padding-bottom: 80px;
-            overflow-x: hidden;
+            font-family: Tahoma, Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #333;
         }
-        
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><path d="M30,30 Q60,0 90,30 T150,90 Q120,120 90,90 T30,30 Z" fill="none" stroke="rgba(52,152,219,0.08)" stroke-width="0.8"/></svg>');
-            opacity: 0.15;
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header & Navigation */
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 0;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 20px;
-        }
-        
-        .topnav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .topnav a {
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 500;
-            position: relative;
-            transition: var(--transition);
-            margin: 0 5px;
-        }
-        
-        .topnav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 3px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-        
-        .topnav a:hover::after,
-        .topnav a.active::after {
-            width: 100%;
-        }
-        
-        .topnav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .topnav a.active {
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-        
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 50px 0 30px;
-            position: relative;
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .hero h1::after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        
-        .hero-content {
-            max-width: 700px;
-            margin: 30px auto;
-            font-size: 1.3rem;
-            color: var(--text);
-            line-height: 1.9;
-            padding: 0 20px;
-            position: relative;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--accent);
-        }
-        
-        .hero-img-container {
-            position: relative;
-            max-width: 400px;
-            margin: 30px auto;
-        }
-        
-        .hero-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border: 4px solid white;
-        }
-        
-        /* Buttons */
-        .buttons-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 50px 0;
-        }
-        
-        .btn {
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
-            color: white;
-            padding: 25px 40px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.8rem;
-            border-radius: 15px;
-            font-weight: bold;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            box-shadow: var(--shadow);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            width: 280px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn i {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+        header p {
+            margin: 0;
+            font-size: 18px;
             opacity: 0.9;
         }
-        
-        .counter {
-            background: var(--accent);
-            color: white;
-            padding: 6px 15px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            margin-top: 15px;
-            display: inline-block;
-            font-weight: bold;
-        }
-        
-        /* Quote */
-        .quote {
-            text-align: center;
-            padding: 40px;
-            margin: 50px auto;
-            max-width: 700px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            position: relative;
-            border-top: 5px solid var(--accent);
-        }
-        
-        .quote p {
-            font-size: 1.8rem;
-            color: var(--primary);
-            font-weight: bold;
-            line-height: 1.8;
-        }
-        
-        .quote .reference {
-            display: block;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: var(--text);
-            opacity: 0.8;
-        }
-        
-        /* Footer */
-        footer {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            text-align: center;
-            padding: 25px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-        }
-        
-        .footer-content {
+         .logo {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 45px;
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 0 20px;
         }
-        
-        .copyright {
-            font-size: 1.1rem;
-            opacity: 0.9;
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .topnav {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .topnav a {
-                padding: 12px 15px;
-                font-size: 1.2rem;
-                margin: 5px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-content {
-                font-size: 1.2rem;
-                padding: 20px;
-            }
-            
-            .btn {
-                font-size: 1.6rem;
-                padding: 20px 30px;
-                width: 240px;
-            }
-            
-            .btn i {
-                font-size: 3rem;
-            }
-            
-            .quote p {
-                font-size: 1.5rem;
-            }
-            
-            .buttons-container {
-                gap: 20px;
-            }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
-        
-        @media (max-width: 480px) {
-            .buttons-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 90%;
-            }
+        .project {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .project img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #ddd;
+        }
+        .project-content {
+            padding: 20px;
+        }
+        .project-content h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .project-content p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .project-content a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: #2c5364;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .project-content a:hover {
+            background: #203a43;
+        }
+        footer {
+            background: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container container">
-            <nav class="topnav">
-                <a class="active" href=""> <i class="fas fa-home"> </i> الرئيسية</a>
-                <a href="sabah/index.html"> <i class="fas fa-sun"> </i> أذكار الصباح</a>
-                <a href="masa/index.html"><i class="fas fa-moon"></i> أذكار المساء</a>
-            </nav>
+
+<header>
+     <div class="logo">
+        <img src="img/d4mr_logo.jpg" alt="Logo">
+       <!--<span>اسم الموقع</span> --> 
+    </div>
+    <h1>موريتانيا للتصميم والبرمجة</h1>
+    <p>نحوّل أفكارك إلى مواقع ويب احترافية</p>
+</header>
+
+<div class="container">
+    <h2 class="section-title">نماذج من أعمالنا</h2>
+
+    <div class="projects">
+        <div class="project">
+            <img src="img/azkari175.jpg" alt="موقع أذكاري">
+            <div class="project-content">
+                <h3>موقع أذكاري  </h3>
+                <p> موقع يعرض أذكار المسلم مع أزرار عد</p>
+                <a href="https://adhkarme.web.app/" target="_blank">زيارة الموقع</a>
+            </div>
         </div>
-    </header>
-
-    <div class="container">
-        <section class="hero">
-            <h1>موقع اذكاري</h1>
-            
-        </section>
-
-        <div class="buttons-container">
-            <a href="sabah/index.html" class="btn">
-                <i class="fas fa-sun"></i>
-                أذكار الصباح
-            </a>
-            
-            <a href="masa/index.html" class="btn">
-                <i class="fas fa-moon"></i>
-                أذكار المساء
-            </a>
+<div class="project">
+            <img src="img/rn175.jpg" alt="ريم نيوز">
+            <div class="project-content">
+                <h3>ريم نيوز</h3>
+                <p>أخبار موريتانيا والعالم بين يديك </p>
+                <a href="https://rimdir.blogspot.com/" target="_blank">زيارة الموقع</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="img/miz175.jpg" alt="راديو عربي">
+            <div class="project-content">
+                <h3>راديو عربي</h3>
+                <p>بث مباشر  للإذاعات من الدول العربية</p>
+                <a href="https://radios-ar.blogspot.com/" target="_blank">زيارة الموقع</a>
+            </div>
         </div>
 
-        <div class="quote">
-            <p>أَلا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</p>
+        <div class="project">
+            <img src="img/rf175.jpg" alt="Radio Francophone">
+            <div class="project-content">
+                <h3>Radio Francophone</h3>
+                <p>Radio Francophone en ligne</p>
+                <a href="https://radios-fr.blogspot.com/" target="_blank">زيارة الموقع</a>
+            </div>
+        </div>
+<!--
+        <div class="project">
+            <img src="project4.jpg" alt="الموقع الرابع">
+            <div class="project-content">
+                <h3>موقع ويب رقم 4</h3>
+                <p>موقع شخصي لعرض السيرة الذاتية والأعمال.</p>
+                <a href="#" target="_blank">زيارة الموقع</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="project5.jpg" alt="الموقع الخامس">
+            <div class="project-content">
+                <h3>موقع ويب رقم 5</h3>
+                <p>منصة خدمات إلكترونية موجهة للسوق المحلي.</p>
+                <a href="#" target="_blank">زيارة الموقع</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="project6.jpg" alt="الموقع السادس">
+            <div class="project-content">
+                <h3>موقع ويب رقم 6</h3>
+                <p>موقع إخباري بتصميم عصري وسرعة تحميل عالية.</p>
+                <a href="#" target="_blank">زيارة الموقع</a>
+            </div>
         </div>
     </div>
+    -->
+</div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="copyright">مـــوقع أذكـــاري | V 1.0</div>
-        </div>
-    </footer>
+<footer>
+    جميع الحقوق محفوظة © موريتانيا للتصميم والبرمجة 2025
+</footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Simple animation for buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach((btn, index) => {
-                setTimeout(() => {
-                    btn.style.transform = 'translateY(0)';
-                    btn.style.opacity = '1';
-                }, 300 * index);
-                
-                // Set initial state for animation
-                btn.style.transform = 'translateY(20px)';
-                btn.style.opacity = '0';
-                btn.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-            });
-        });
-    </script>
 </body>
 </html>
